@@ -37,7 +37,7 @@ Available options:
 		maxCommandLength: 6,  // Maximum command length
 		yataUrl: `https://yata.yt/api/v1/travel/export/`,  // YATA fetch url
 		tornUrl: `https://api.torn.com/torn/?selections=items&key=[API-KEY]`,  // Torn fetch url. Must contain [API-KEY] template
-		silentErrors: true,  // If exceptions should throw a stack in console or just terminate with a one-line error message
+		silentErrors: false,  // If exceptions should throw a stack in console or just terminate with a one-line error message
 		defaultLogsCount: 10,  // Default logs count when using "!travel logs"
 		dateFormat: 'EU',  // Date format
 	},

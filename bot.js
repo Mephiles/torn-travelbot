@@ -17,7 +17,7 @@ const travelBot = new TravelBot(client, auth.api_key, {
 		maxCommandLength: 6,
 		yataUrl: `https://yata.yt/api/v1/travel/export/`,
 		tornUrl: `https://api.torn.com/torn/?selections=items&key=[API-KEY]`,
-		silentErrors: true,
+		silentErrors: false,
 		defaultLogsCount: 10,
 		dateFormat: 'EU',
 	},
