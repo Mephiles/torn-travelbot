@@ -23,7 +23,7 @@ const travelBot = new TravelBot(client, apiKey, options);
 where `client` is Discord.js client, `apiKey` is Torn's API key. Available options can be found under Configuration.
 
 ## Configuration
-Available options:
+Available options (with default values):
 ```
 {
 	autoUpdate: true,  // NB! false does not work yet
