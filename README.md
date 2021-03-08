@@ -39,7 +39,7 @@ Available options (with default values):
 		tornUrl: `https://api.torn.com/torn/?selections=items&key=[API-KEY]`,  // Torn fetch url. Must contain [API-KEY] template
 		silentErrors: false,  // If exceptions should throw a stack in console or just terminate with a one-line error message
 		defaultLogsCount: 10,  // Default logs count when using "!travel logs"
-		dateFormat: 'EU',  // Date format
+		dateFormat: 'EU',  // Date format. Available options: ['EU', 'US', 'ISO']
 	},
 }
 ```
