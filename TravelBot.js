@@ -556,15 +556,27 @@ ${TravelBot.BOT_NAME}:
 		lastX = lastX > this.LOGS.length ? this.LOGS.length : lastX;
 		const logs = this.GetLogs(lastX);
 
-		const embed = new Discord.MessageEmbed()
-			.setColor('#0099ff')
-			.setAuthor(`${TravelBot.BOT_NAME} - Info`)
-			.addField(
-				`${TravelBot.BOT_NAME} logs (last ${lastX})`,
-				`${logs.map((log) => `${log.date} - ${log.message}`).join('\n')}`
-			)
-			.setFooter(`Brought to you by: Mephiles [2087524]`);
-		channel.send(embed);
+		try {
+			const embed = new Discord.MessageEmbed()
+				.setColor('#0099ff')
+				.setAuthor(`${TravelBot.BOT_NAME} - Info`)
+				.addField(
+					`${TravelBot.BOT_NAME} logs (last ${lastX})`,
+					`${logs.map((log) => `${log.date} - ${log.message}`).join('\n')}`
+				)
+				.setFooter(`Brought to you by: Mephiles [2087524]`);
+			channel.send(embed);
+		} catch (err) {
+			const embed = new Discord.MessageEmbed()
+				.setColor('#0099ff')
+				.setAuthor(`${TravelBot.BOT_NAME} - Info`)
+				.addField(
+					`${TravelBot.BOT_NAME} logs`,
+					`Sorry, that's too many logs. Try giving me a lower number.`
+				)
+				.setFooter(`Brought to you by: Mephiles [2087524]`);
+			channel.send(embed);
+		}
 	}
 
 	//
